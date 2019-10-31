@@ -1,8 +1,8 @@
-function isDivisibleBy(divisor, number) {
-  return number % divisor === 0
+function isDivisibleBy(divisor: number, number: number) {
+  return number % divisor === 0;
 }
 
-export const toFizzBuzzString = (number) => {
+export const toFizzBuzzString = (number: number) => {
   if (isDivisibleBy(15, number)) {
     return 'FizzBuzz';
   }
@@ -13,10 +13,10 @@ export const toFizzBuzzString = (number) => {
     return 'Fizz';
   }
   return number.toString();
-}
+};
 
 export const fizzBuzz = () => {
   return Array(100)
-    .fill()
-    .map((_, index) => toFizzBuzzString(index + 1))
+    .fill(0)
+    .map((_, index) => toFizzBuzzString(index + 1));
 };
